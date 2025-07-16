@@ -40,6 +40,10 @@ export default function Checkout() {
     clearData();
   }
 
+  function handleBackToCart() {
+  userProgressCtx.showCart();
+}
+
   async function checkoutAction(prevState, fd) {
     const customerData = Object.fromEntries(fd.entries()); // { email: test@example.com }
 

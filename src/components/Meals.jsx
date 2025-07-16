@@ -24,10 +24,19 @@ export default function Meals() {
   // }
 
   return (
-    <ul id="meals">
-      {loadedMeals.map((meal) => (
-        <MealItem key={meal.id} meal={meal} />
-      ))}
-    </ul>
+    <div>
+      <h2 style={{ color: '#ff4b4f', textAlign: 'center', fontSize: '2rem', fontWeight: 'normal', letterSpacing: '0.1rem' }}>Entrées</h2>
+      <ul id="meals">
+        {loadedMeals.filter((meal) => meal.category === 'entree').map((meal) => (
+          <MealItem key={meal.id} meal={meal} />
+        ))}
+      </ul>
+      <h2 style={{ color: '#ff4b4f', textAlign: 'center', fontSize: '2rem', fontWeight: 'normal', letterSpacing: '0.1rem' }}>Breakfast</h2>
+      <ul id="meals">
+        {loadedMeals.filter((meal) => meal.category === 'breakfast').map((meal) => (
+          <MealItem key={meal.id} meal={meal} />
+        ))}
+      </ul>
+    </div>
   );
 }
