@@ -21,7 +21,7 @@ export default function Checkout() {
   const userProgressCtx = useContext(UserProgressContext);
 
   const { data, error, sendRequest, clearData } = useHttp(
-    'http://localhost:8080/orders',
+    `${import.meta.env.VITE_API_URL}/orders`,
     requestConfig
   );
 

@@ -9,7 +9,7 @@ export default function Meals() {
     data: loadedMeals,
     isLoading,
     error,
-  } = useHttp('http://localhost:8080/meals', requestConfig, []);
+  } = useHttp(`${import.meta.env.VITE_API_URL}/meals`, requestConfig, []);
 
   if (isLoading) {
     return <p className="center">Fetching meals...</p>;
