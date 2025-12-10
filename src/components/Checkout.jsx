@@ -119,6 +119,7 @@ export default function Checkout() {
         </div>
 
         {error && <Error title='Failed to submit order' message={error} />}
+        <p>DISCLAIMER: This is just a demo. Never submit real personal information.</p>
 
         <p className='modal-actions'>{actions}</p>
       </form>
